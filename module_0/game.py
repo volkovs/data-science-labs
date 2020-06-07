@@ -3,7 +3,8 @@ import numpy as np
 
 def game_core_v1(number):
     """Just guessing the number randomly (not using information about the selected number anyhow).
-    Function accepts the number to guess and returns number of attempts to complete the guess."""
+    Function accepts the number to guess and
+    returns the number of attempts were made to complete the guess."""
 
     count = 0
 
@@ -33,6 +34,48 @@ def game_core_v2(number):
     return count
 
 
+def game_core_v3(number):
+    """Taking random number. Then use binary search to guess the number.
+    Function accepts the number to guess and
+    returns the number of attempts were made to complete the guess."""
+
+    count = 1
+    low_limit = 1
+    high_limit = 100
+    predict = np.random.randint(low_limit, high_limit + 1)
+
+    while number != predict:
+        count += 1
+        if number > predict:
+            low_limit = predict + 1
+        elif number < predict:
+            high_limit = predict - 1
+        predict = low_limit + (high_limit - low_limit) // 2
+
+    return count
+
+
+def game_core_v4(number):
+    """Use binary search to guess the number.
+    Function accepts the number to guess and
+    returns the number of attempts were made to complete the guess."""
+
+    count = 1
+    low_limit = 1
+    high_limit = 100
+    predict = low_limit + (high_limit - low_limit) // 2
+
+    while number != predict:
+        count += 1
+        if number > predict:
+            low_limit = predict + 1
+        elif number < predict:
+            high_limit = predict - 1
+        predict = low_limit + (high_limit - low_limit) // 2
+
+    return count
+
+
 def score_game(game_core):
     """launch the game 1000 times and evaluate AI performance (average number of attempts to guess)"""
 
@@ -49,4 +92,6 @@ def score_game(game_core):
 
 
 # score_game(game_core_v1)
-score_game(game_core_v2)
+# score_game(game_core_v2)
+# score_game(game_core_v3)
+score_game(game_core_v4)
