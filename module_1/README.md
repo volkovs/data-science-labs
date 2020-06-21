@@ -5,20 +5,22 @@ Answer to different questions by product development team
 27
 
 # Other questions
-- Role in the team
-> `Data Analyst`
 
-- Part of the solution you are proud of
-> Finding actors or actresses filming together most often without duplicates
+#### Role in the team
+`Data Analyst`
 
-- Items to improve
-> Finding average voting threshold to be included or not in the 1% of the best moovies. Current solution is indeterministic and depends on the order of records in data source. Otherwise saying part of the movies with the same rating is included in result and part - is not.
+#### Part of the solution you are proud of
+Finding actors or actresses filming together most often without duplicates
 
-- Did you find something new
-> Lots of different tiny things on type conversion and access to internal structures
+#### Items to improve
+- Finding average voting threshold to be included or not in the 1% of the best moovies. Current solution is indeterministic and depends on the order of records in data source. Otherwise saying part of the movies with the same rating is included in result and part - is not.
+- Some tasks were solved by brute force using nested loops. I assume there are better algorithms, or, at least, libraries to use I am, unfortunately, not aware of.
 
-- The main result of the project being completed
-> Realizing how slow I am
+#### Did you find something new
+Lots of different tiny things on type conversion and access to internal structures
 
-- Plans to change education strategy in following modules if any
-> I plan to start visiting seminars
+#### The main result of the project being completed
+Realizing how slow I am
+
+#### Plans to change education strategy in following modules if any
+I plan to start visiting seminars
